@@ -1,0 +1,2 @@
+Create a link to the .vimrc file in your home folder:
+ln -s ~/.vim/vimrc ~/.vimrc
