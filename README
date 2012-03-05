@@ -1,2 +1,7 @@
-Create a link to the .vimrc file in your home folder:
+Setting this up on a new computer:
+cd ~
+git clone http://github.com/danwalkeriv/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
+cd ~/.vim
+git submodule init
+git submodule update
