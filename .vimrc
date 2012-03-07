@@ -1,6 +1,15 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+" Increase length of commands and search parameters
+set history=1000
+
+" So that buffers can stay open in the background
+set hidden
+
+" The Leader key, mapped to
+let mapleader = "\\"
+
 " For the sake of appearances
 syntax on
 set number
@@ -39,3 +48,6 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+
+" Gundo is mapped to F5
+nnoremap <F5> :GundoToggle<CR>
