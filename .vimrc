@@ -15,8 +15,11 @@ syntax on
 set number
 
 " Setup colorscheme
+set background=dark
 set t_Co=256
-colorscheme gardener
+
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " Setup tabbing
 set smarttab
@@ -49,5 +52,16 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Configuration changes for individual plugins here
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fix the escape key in Command-T
+if &term =~ "xterm" || &term =~ "screen"
+    let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
+    let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
+    let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+endif
+
 " Gundo is mapped to F5
 nnoremap <F5> :GundoToggle<CR>
+
