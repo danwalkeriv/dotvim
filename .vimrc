@@ -18,8 +18,9 @@ set number
 set background=dark
 set t_Co=256
 
-let g:solarized_termcolors=256
-colorscheme solarized
+" let g:solarized_termcolors=256
+" colorscheme solarized
+colorscheme gardener
 
 " Setup tabbing
 set smarttab
@@ -65,3 +66,5 @@ endif
 " Gundo is mapped to F5
 nnoremap <F5> :GundoToggle<CR>
 
+" Flake8 mapped to F7
+autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
