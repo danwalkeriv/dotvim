@@ -64,7 +64,7 @@ if &term =~ "xterm" || &term =~ "screen"
 endif
 
 " Gundo is mapped to F5
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <Leader>g :GundoToggle<CR>
 
-" Flake8 mapped to F7
-autocmd FileType python map <buffer> <F3> :call Flake8()<CR>
+" Flake8 mapped to F3
+autocmd FileType python map <buffer> <Leader>f :call Flake8()<CR>
